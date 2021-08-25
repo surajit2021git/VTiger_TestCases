@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test_Runner1(failed)">
+    <parameter name="BrowserName" value="Chrome"/>
+    <classes>
+      <class name="vTiger.Test_Scripts.VTiger_purchaseOrder_TC32">
+        <methods>
+          <include name="testCase32"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- vTiger.Test_Scripts.VTiger_purchaseOrder_TC32 -->
+      <class name="vTiger.Test_Scripts.VTiger_purchaseOrder_TC31">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testCase31"/>
+        </methods>
+      </class> <!-- vTiger.Test_Scripts.VTiger_purchaseOrder_TC31 -->
+      <class name="vTiger.Test_Scripts.VTiger_purchaseOrder_TC30">
+        <methods>
+          <include name="testCase30"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- vTiger.Test_Scripts.VTiger_purchaseOrder_TC30 -->
+    </classes>
+  </test> <!-- Test_Runner1(failed) -->
+</suite> <!-- Failed suite [Suite] -->
