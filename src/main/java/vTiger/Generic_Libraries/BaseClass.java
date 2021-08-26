@@ -5,9 +5,11 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -19,12 +21,12 @@ public class BaseClass {
 	public WebUtilities utilities=new WebUtilities();
 	public AccessRandom randomAccess=new AccessRandom();
 	
-	//@Parameters({"BrowserName"})
+	@Parameters({"BrowserName"})
 	@BeforeMethod
-	public void setUp() throws FileNotFoundException, IOException
+	public void setUp(String BrowserName) throws FileNotFoundException, IOException
 	{
 		//String BrowserName=System.getProperty("browser");
-		/*if(BrowserName.equalsIgnoreCase("Chrome"))
+		if(BrowserName.equalsIgnoreCase("Chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();
@@ -33,9 +35,9 @@ public class BaseClass {
 		{
 			WebDriverManager.firefoxdriver().setup();
 			driver=new FirefoxDriver();
-		}*/
+		}
 		
-		WebDriverManager.chromedriver().setup();
+		/*WebDriverManager.chromedriver().setup();
 		driver=new ChromeDriver();
 		
 		/*WebDriverManager.firefoxdriver().setup();

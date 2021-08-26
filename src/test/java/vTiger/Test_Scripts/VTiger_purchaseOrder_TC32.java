@@ -40,7 +40,7 @@ public class VTiger_purchaseOrder_TC32 extends BaseClass{
 		
 		//Thread.sleep(4000);
 		
-		//utilities.switchFrameByIndex(driver, 0);
+		utilities.switchFrameByIndex(driver, 0);
 		
 		
         utilities.switchTab(driver, " Administrator - Purchase Order - vtiger CRM 5 - Commercial Open Source CRM");
