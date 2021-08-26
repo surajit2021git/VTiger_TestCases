@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+  <parameter name="BrowserName" value="Chrome"></parameter>
+    <classes>
+      <class name="vTiger.Test_Scripts.VTiger_purchaseOrder_TC36"/>
+      <class name="vTiger.Test_Scripts.VTiger_purchaseOrder_TC37"/>
+      <class name="vTiger.Test_Scripts.VTiger_purchaseOrder_TC38"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
