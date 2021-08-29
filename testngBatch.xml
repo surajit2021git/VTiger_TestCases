@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+<listeners>
+	<listener class-name="vTiger.Generic_Libraries.Listeners" />
+</listeners>
+
   <test thread-count="5" name="Test">
   <parameter name="BrowserName" value="Chrome"></parameter>
     <classes>
       <class name="vTiger.Test_Scripts.VTiger_purchaseOrder_TC30"/>
-      <class name="vTiger.Test_Scripts.VTiger_purchaseOrder_TC31"/>
-      <class name="vTiger.Test_Scripts.VTiger_purchaseOrder_TC32"/>
-      <class name="vTiger.Test_Scripts.VTiger_purchaseOrder_TC33"/>
+      	
+      <class name="vTiger.Test_Scripts.VTiger_purchaseOrder_TC31">
+      	<methods>
+      		<include name="testCase31" />
+      	</methods>
+      </class>
+      <class name="vTiger.Test_Scripts.VTiger_purchaseOrder_TC32">
+      	<methods>
+      		<include name="testCase32" />
+      	</methods>
+      </class>
+      
+      <class name="vTiger.Test_Scripts.VTiger_purchaseOrder_TC33">
+      	<methods>
+      		<exclude name="testCase33"/>
+      	</methods>
+      </class>
+      	
       <class name="vTiger.Test_Scripts.VTiger_purchaseOrder_TC34"/>
     </classes>
   </test> <!-- Test -->
