@@ -11,7 +11,7 @@ import org.openqa.selenium.WebDriver;
 
 public class AccessPhoto {
 	
-	public File getPhoto(WebDriver driver,String name) throws IOException
+	public String getPhoto(WebDriver driver,String name) throws IOException
 	{
 		Date d=new Date();
 		String date = d.toString().replaceAll(":", "-");
@@ -22,7 +22,7 @@ public class AccessPhoto {
 		
 		 FileUtils.copyFile(sourceLoaction, destinationLocation);
 		 
-		 return destinationLocation;
+		 return destinationLocation.toString();
 	}
 
 }

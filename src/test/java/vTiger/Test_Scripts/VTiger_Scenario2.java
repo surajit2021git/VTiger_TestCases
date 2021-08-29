@@ -4,16 +4,20 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import junit.framework.Assert;
+
 import vTiger.Generic_Libraries.BaseClass;
 import vTiger.PomPages.HomePage;
 import vTiger.PomPages.LoginPage;
-//@Listeners(vTiger.Generic_Libraries.Listeners.class)
+
+
+@Listeners(vTiger.Generic_Libraries.Listeners.class)
 public class VTiger_Scenario2 extends BaseClass{
 	
-	@Test(retryAnalyzer = vTiger.Generic_Libraries.RetryAnalizer.class)
+	@Test()
 	public void testCase2() throws FileNotFoundException, IOException
 	{
 		LoginPage pageLogin=new LoginPage(driver);
@@ -23,10 +27,10 @@ public class VTiger_Scenario2 extends BaseClass{
 		pageHome.getOrgranizatonsLink().click();
 		
 		driver.findElement(By.xpath("(//a[text()='Test Yantra software solutions'])[2]")).click();
-		String actualOrgName = driver.findElement(By.xpath("//span[@id='dtlview_Organization Name']")).getText();
-		String expectedOrgName="Test Yantra software solutions";
+		//String actualOrgName = driver.findElement(By.xpath("//span[@id='dtlview_Organization Name']")).getText();
+		//String expectedOrgName="Tes Yantra software solutions";
 		
-		Assert.assertEquals(expectedOrgName, actualOrgName);
+		Assert.assertEquals(true,false);
 		
 		/*OrganizationsPage pageOrg=new OrganizationsPage(driver);
 		pageOrg.getCreateOrganizationsButton().click();
